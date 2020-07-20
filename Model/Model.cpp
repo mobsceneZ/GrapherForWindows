@@ -1,9 +1,9 @@
-#include "model.h"
+#include "Model.h"
 
 
 Model::Model()
 {
-    lexer = std::make_shared<class lexer>();
+    lexer = std::make_shared<class Lexer>();
     x = std::make_shared<QVector<double>>();
     y = std::make_shared<QVector<double>>();
     IntegralAns = std::make_shared<double>();
@@ -49,10 +49,10 @@ std::shared_ptr<double> Model::getIntegral()
 bool Model::buildtree(const string str)
 {
     lexer->setstring(str);
-    if(lexer->strtotree())return true;
+    if(lexer->string_to_tree())return true;
     else return false;
 }
-
+/*
 void Model::differential(double x)
 {
     *DifferentialAns=lexer->differential(x);
@@ -64,8 +64,8 @@ void Model::integral(double a,double b)
     *IntegralAns=lexer->integral(a,b);
     Fire_OnPropertyChanged("Integral");
 }
-
+*/
 std::string Model::getString()
 {
-    return lexer->getString();
+    return lexer->getstring();
 }

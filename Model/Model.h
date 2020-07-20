@@ -2,7 +2,7 @@
 #define MODEL_H
 
 #include "../Common/etlbase.h"
-#include "../Algorithm/lexer.h"
+#include "../Algorithm/Lexer.h"
 #include <memory>
 #include <vector>
 #include <QVector>
@@ -20,12 +20,12 @@ public:
     std::shared_ptr<double> getIntegral();
     std::shared_ptr<double> getDifferential();
     std::string getString();
-    void differential(double x);
-    void integral(double a,double b);
+    //void differential(double x);
+    //void integral(double a,double b);
     void cal(double a,double b);
     bool buildtree(const std::string str);
 private:
-    std::shared_ptr<lexer> lexer;
+    std::shared_ptr<Lexer> lexer;
     std::shared_ptr<QVector<double>> x,y;
     std::shared_ptr<double> IntegralAns,DifferentialAns;
 };
