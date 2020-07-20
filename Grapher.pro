@@ -22,9 +22,14 @@ SOURCES += \
     App/StartUICommand/StartUICommand.cpp \
     App/APP.cpp \
     Lib/qcustomplot.cpp \
+    Model/Model.cpp \
     View/mainwindow.cpp \
     App/main.cpp \
-    View/startinterface.cpp
+    View/startinterface.cpp \
+    ViewModel/Commands/CalculusCommand.cpp \
+    ViewModel/Commands/PaintCommand.cpp \
+    ViewModel/Sinks/ViewModelSink.cpp \
+    ViewModel/ViewModel.cpp
 
 HEADERS += \
     Algorithm/Lexer.h \
@@ -33,8 +38,13 @@ HEADERS += \
     App/APP.h \
     Lib/qcustomplot.h \
     Common/etlbase.h \
+    Model/Model.h \
     View/mainwindow.h \
-    View/startinterface.h
+    View/startinterface.h \
+    ViewModel/Commands/CalculusCommand.h \
+    ViewModel/Commands/PaintCommand.h \
+    ViewModel/Sinks/ViewModelSink.h \
+    ViewModel/ViewModel.h
 
 FORMS += \
     View/mainwindow.ui \
