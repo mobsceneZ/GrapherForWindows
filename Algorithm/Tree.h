@@ -11,11 +11,11 @@ typedef class TreeNode* TNode;
 #define FuncTotal 7
 const string func[7] = {"sin","cos","tan","abs","sqrt","ln","lg"};
 
-enum TokenType
-{NUMBER, ALGEBRA,OPERATOR,FUNCTION,NONE,WRONG};
+enum
+TokenType{NUMBER, ALGEBRA,OPERATOR,FUNCTION,NONE,WRONG};
 
-enum Priority
-{ERROR,RightBracket,AddSub,MulDiv,Pow,LeftBracket};
+enum
+Priority{ERROR1,RightBracket,AddSub,MulDiv1,Pow,LeftBracket};
 
 class TreeNode {
 private:

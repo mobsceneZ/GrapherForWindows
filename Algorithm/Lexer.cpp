@@ -141,12 +141,12 @@ int Lexer::priority(char c)
     {
         case '+': return AddSub;
         case '-': return AddSub;
-        case '*': return MulDiv;
-        case '/': return MulDiv;
+        case '*': return MulDiv1;
+        case '/': return MulDiv1;
         case '^': return Pow;
         case '(': return LeftBracket;
         case ')': return RightBracket;
-        default: return ERROR;
+        default: return ERROR1;
     }
 }
 
