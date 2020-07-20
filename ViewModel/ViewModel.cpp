@@ -1,6 +1,6 @@
-#include "viewmodel.h"
-#include "sinks/viewmodelsink.h"
-#include "commands/PaintCommand.h"
+#include "ViewModel.h"
+#include "Sinks/ViewModelSink.h"
+#include "Commands/PaintCommand.h"
 
 ViewModel::ViewModel()
 {
@@ -34,7 +34,7 @@ std::shared_ptr<ICommandBase> ViewModel::getPaintCmd()
 {
     return std::static_pointer_cast<ICommandBase>(ptr_PaintCmd);
 }
-
+/*
  void ViewModel::CalcDifferential(const std::string &str, const double &x)
  {
      if(str!=ptr_Model->getString())ptr_Model->buildtree(str);
@@ -46,7 +46,7 @@ std::shared_ptr<ICommandBase> ViewModel::getPaintCmd()
      if(str!=ptr_Model->getString())ptr_Model->buildtree(str);
      ptr_Model->integral(left,right);
  }
-
+*/
 bool ViewModel::CalcCoordinate(const std::string &str, const double &left, const double &right)
 {
     if(ptr_Model->buildtree(str))
@@ -69,7 +69,7 @@ std::shared_ptr<QVector<double> > ViewModel::getY()
 {
     return ptr_Model->getY();
 }
-
+/*
 std::shared_ptr<double> ViewModel::getIntegral()
 {
     return ptr_Model->getIntegral();
@@ -78,3 +78,4 @@ std::shared_ptr<double> ViewModel::getDifferential()
 {
     return ptr_Model->getDifferential();
 }
+*/
