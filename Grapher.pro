@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,13 +17,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
+    Algorithm/Lexer.cpp \
+    Algorithm/Tree.cpp \
+    App/StartUICommand/StartUICommand.cpp \
+    App/APP.cpp \
+    Lib/qcustomplot.cpp \
+    View/mainwindow.cpp \
+    App/main.cpp \
     View/startinterface.cpp
 
 HEADERS += \
+    Algorithm/Lexer.h \
+    Algorithm/Tree.h \
+    App/StartUICommand/StartUICommand.h \
+    App/APP.h \
+    Lib/qcustomplot.h \
+    Common/etlbase.h \
+    View/mainwindow.h \
     View/startinterface.h
 
 FORMS += \
+    View/mainwindow.ui \
     View/startinterface.ui
 
 # Default rules for deployment.
